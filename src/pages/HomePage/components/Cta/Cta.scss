@@ -1,0 +1,64 @@
+.cta {
+  background: #f6f8f7;
+  height: 632px;
+  width: 100%;
+  text-align: center;
+}
+.cta h4 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  color: #292e3d;
+  padding-top: 60px;
+}
+.cta p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #292e3d;
+}
+.name-mail {
+  display: grid;
+  grid-template-columns: 280px 280px;
+  gap: 32px;
+  margin-left: 424px;
+  margin-bottom: 32px;
+}
+[placeholder] {
+  padding: 10px 8px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #a3aac2;
+}
+form p {
+  margin-right: 300px;
+}
+.cta input {
+  height: 41px;
+  width: 280px;
+  background: #ffffff;
+  border: 1px solid #e0e3eb;
+  border-radius: 4px;
+}
+textarea {
+  height: 135px;
+  width: 592px;
+  background: #ffffff;
+  border: 1px solid #e0e3eb;
+  border-radius: 4px;
+}
+.form button {
+  height: 53px;
+  width: 271px;
+  background: #2947a9;
+  border-radius: 2px;
+  border: 2px solid #2947a9;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+}

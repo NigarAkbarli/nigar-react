@@ -1,0 +1,44 @@
+.reasons {
+  width: 100%;
+}
+.reasons h1 {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.boxes {
+  display: flex;
+  align-items: center;
+}
+.box {
+  border: 1px solid rgb(194, 194, 194);
+  width: 292px;
+  height: 197px;
+  padding: 20px;
+  margin-left: 75px;
+  margin-bottom: 84px;
+}
+.box:first-child {
+  margin-left: 216px;
+}
+@media (max-width: 400px) {
+  .reasons h1 {
+    font-size: 25px;
+  }
+  .boxes {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: -50px;
+  }
+  .box {
+    margin-left: 76px;
+    margin-bottom: 26px;
+  }
+  .box:first-child {
+    margin-left: 72px;
+  }
+  .box:last-child {
+    margin-bottom: 40px;
+  }
+}

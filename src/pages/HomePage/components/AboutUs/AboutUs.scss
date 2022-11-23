@@ -1,0 +1,52 @@
+.about-us {
+    display: flex;
+    align-items: center;
+    padding: 0px 112px;
+    height: 495px;
+    width: 1440px;
+    margin-top: 158px;
+  }
+  .blue-box {
+    flex-shrink: 0;
+    z-index: 1;
+    margin-left: -176px;
+    width: 488px;
+    height: 523px;
+    border: 1px solid #2947a9;
+    background-color: #2947a9;
+    border-radius: 2px;
+    padding-left: 40px;
+    color: white;
+    box-shadow: 0px 20px 24px -4px rgba(17, 24, 39, 0.1),
+      0px 8px 8px -4px rgba(17, 24, 39, 0.04);
+  }
+  .blue-box h2 {
+    padding-top: 50px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .blue-box p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .blue-box button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 20px;
+    gap: 10px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #2947a9;
+    background: #ffffff;
+    border: 2px solid #2947a9;
+    border-radius: 6px;
+  }
