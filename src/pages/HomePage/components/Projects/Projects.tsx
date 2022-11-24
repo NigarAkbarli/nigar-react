@@ -2,13 +2,15 @@ import "./Projects.scss";
 import arrow from "../../../../assets/images/Vector.svg";
 import arrow1 from "../../../../assets/images/Vector (1).svg";
 import rectangle1 from "./Rectangle 17.svg";
-import project1 from './project1.jpg'
-import project2 from './project2.jpg'
-import project3 from './project3.jpg'
-import project4 from './project4.jpg'
+import project1 from "./project1.jpg";
+import project2 from "./project2.jpg";
+import project3 from "./project3.jpg";
+import project4 from "./project4.jpg";
 import { ProjectCards } from "./ProjectCards";
+import { useState } from "react";
 
 export const Projects = () => {
+  const projectCardWidth = 410;
   const projects = [
     {
       id: 1,
@@ -41,6 +43,14 @@ export const Projects = () => {
       address: "2715 Ash Dr. San Jose, South Dakota",
     },
   ];
+  const [currentSlideNumber, setCurrentSliderNumber] = useState(0);
+
+  const leftButtonHandler = () => {
+    setCurrentSliderNumber(currentSlideNumber - 1);
+  };
+  const rightButtonHandler = () => {
+    setCurrentSliderNumber(currentSlideNumber + 1);
+  };
   return (
     <div className="projects desktop-only">
       <h4>Projects</h4>
@@ -56,18 +66,23 @@ export const Projects = () => {
         </div>
 
         <div className="project-cards">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <ProjectCards
               imageSrc={project.imageSrc}
               title={project.title}
               address={project.address}
               key={project.id}
+              marginLeft={index === 0 ? `${-projectCardWidth * currentSlideNumber}px` : ""}
             />
           ))}
         </div>
       </div>
       <div className="bar">
-        <button className="left">
+        <button
+          className="left"
+          disabled={currentSlideNumber === 0}
+          onClick={leftButtonHandler}
+        >
           <div>
             <img src={arrow} alt="" />
             <p>Back</p>
@@ -77,7 +92,11 @@ export const Projects = () => {
         <span className="dot"></span>
         <span className="dot"></span>
         <span className="dot"></span>
-        <button className="right">
+        <button
+          className="right"
+          disabled={currentSlideNumber === projects.length - 2}
+          onClick={rightButtonHandler}
+        >
           <div>
             <p>Next</p>
             <img src={arrow1} alt="" />
